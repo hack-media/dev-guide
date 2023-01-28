@@ -1,5 +1,5 @@
 <template>
-  <div class="mt-70 mb-50">
+  <div class="mt-70">
     <h2
       class="color-linear mb-10 wow animate__ animate__fadeInUp animated"
       style="visibility: visible; animation-name: fadeInUp"
@@ -38,7 +38,7 @@
               />
               <div class="card-info card-bg-2">
                 <div class="info-bottom mb-15">
-                  <h4 class="color-white mb-15">
+                  <h4 class="mb-15">
                     Aenean Auctor Wisi Et Urna Aliquam Erat
                   </h4>
                   <div class="box-author">
@@ -91,7 +91,7 @@ const latestArticles = [
 }
 
 .card-style:hover h6 {
-  color: #1CC2E7 !important;
+  color: #1cc2e7 !important;
 }
 
 .card-style:hover .card-image img {
@@ -110,7 +110,7 @@ const latestArticles = [
 }
 
 .card-style .card-image .link-post:hover h4 {
-  color: #1CC2E7 !important;
+  color: #1cc2e7 !important;
 }
 
 .card-style .card-image .card-info {

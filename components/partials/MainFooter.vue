@@ -15,12 +15,12 @@
               Perspiciatis ipsum ab nam accusantium. Corrupti, ab libero ad
               tempore quod dicta.
             </p>
-            <h6 class="color-white mb-5">Address</h6>
+            <h6 class="mb-5">Address</h6>
             <p class="text-sm color-gray-500">East Legon<br />Ghana, Accra</p>
           </div>
 
           <div class="col-lg-4 mb-30">
-            <h6 class="text-lg mb-30 color-white">Categories</h6>
+            <h6 class="text-lg mb-30">Categories</h6>
             <div class="row">
               <div class="col-6">
                 <ul class="menu-footer">
@@ -57,7 +57,7 @@
           </div>
 
           <div class="col-lg-4 mb-30">
-            <h4 class="text-lg mb-30 color-white">Newsletter</h4>
+            <h4 class="text-lg mb-30">Newsletter</h4>
             <p class="text-base color-gray-500">
               Sign up to be first to receive the latest stories inspiring us,
               case studies, and industry news.
@@ -92,7 +92,7 @@
         <div class="footer-bottom border-gray-800">
           <div class="row">
             <div class="col-lg-5 text-center text-lg-start">
-              <p class="text-base color-white">
+              <p class="text-base">
                 © 2023<a
                   class="copyright"
                   href="#"

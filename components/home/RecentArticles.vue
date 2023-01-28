@@ -33,7 +33,7 @@
               </div>
               <div class="card-info">
                 <a href="single-sidebar.html">
-                  <h5 class="mb-15 color-white">
+                  <h5 class="mb-15">
                     How to Grow Your Business on Instagram in 2022
                   </h5></a
                 >
@@ -103,10 +103,6 @@ const recentArticles = [
   display: flex;
   width: 100%;
   margin-bottom: 60px;
-}
-
-.card-list-posts:hover h5.color-white {
-  color: #1cc2e7 !important;
 }
 
 .card-list-posts .card-image {

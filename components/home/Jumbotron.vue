@@ -1,40 +1,22 @@
 <template>
-  <div class="banner banner-home2">
+  <div class="banner">
     <div class="text-center">
-      <h6 class="color-gray-600">Welcome to devguide blog</h6>
-      <h1 class="color-white">
-        Being<span class="color-linear"> Unique</span> is better<br
-          class="d-none d-lg-block"
-        />than being
-        <span class="color-linear">Erfect</span>
+      <h1>
+        <span class="color-linear">Unlocking</span> the Latest
+        <br class="d-none d-lg-block" />Tech
+        <span class="color-linear">Trends...</span>
       </h1>
     </div>
 
-    <div class="text-center mt-50">
-      <ul class="list-tags-col-5 mb-50 text-center">
+    <div class="mt-5">
+      <ul class="list-tags">
         <li
           v-for="frame in frameworks"
           :key="frame.name"
         >
-          <div
-            class="card-style-2 hover-up hover-neon animate__ animate__fadeInUp animated"
-            style="visibility: visible"
-          >
-            <div class="card-image">
-              <!-- <a href="blog-archive.html"
-                ><img
-                  src="assets/imgs/page/homepage1/tag1.png"
-                  alt="Genz"
-              /></a> -->
-            </div>
-            <div class="card-info">
-              <a
-                class="color-gray-500"
-                href="blog-archive.html"
-                >{{ frame.name }}</a
-              >
-            </div>
-          </div>
+          <NuxtLink :to="{ name: 'index' }">
+            {{ frame.name }}
+          </NuxtLink>
         </li>
       </ul>
     </div>
@@ -75,69 +57,41 @@ const frameworks = [
 
 <style scoped>
 .banner {
-  padding-top: 50px;
+  padding-top: 5rem;
 }
 
-.banner-home2 {
-  padding-top: 80px;
-}
-
-.card-style-2 {
-  border-width: 1px;
-  border-style: solid;
-  padding: 19px;
-  position: relative;
+.list-tags {
   display: flex;
-  border-radius: 16px;
-  align-items: center;
-  margin-bottom: 30px;
-}
-
-.card-style-2 .card-image {
-  width: 32px;
-  height: 32px;
-  margin-right: 8px;
-  min-width: 32px;
-}
-
-.card-style-2 .card-image img {
-  width: 32px;
-  height: 32px;
-  border-radius: 50%;
-}
-
-.card-style-2 .card-info a:hover {
-  color: #1CC2E7;
-}
-
-.list-tags-col-5 {
-  display: flex;
-  margin: 0px -10px;
-  flex-wrap: wrap;
   justify-content: center;
+  flex-wrap: wrap;
+  text-align: center;
+  gap: 0.8rem;
 }
 
-.list-tags-col-5 li {
+.list-tags li {
   flex: 0 0 auto;
   width: 20%;
-  padding: 0px 10px;
   min-width: 150px;
   max-width: 180px;
-}
-
-.hover-neon {
+  padding: 1.3rem;
+  margin-bottom: 30px;
+  border-radius: 0.5rem;
   transition: all 0.25s cubic-bezier(0.02, 0.01, 0.47, 1);
-  border: 1px solid #222f43;
-  background-color: #131c31;
+  border: 1px solid transparent;
+  background-color: var(--ocean);
+  font-weight: 600;
 }
 
-.hover-neon:hover {
-  background: linear-gradient(#131c31, #131c31) padding-box,
-    linear-gradient(to right, rgb(14, 165, 234), rgb(11, 209, 209)) border-box;
-  border-radius: 16px;
-  border: 1px solid transparent;
-  box-shadow: rgba(11, 209, 209, 0.2) 0px 3px 20px;
+.list-tags li:hover {
+  background: linear-gradient(var(--secondary), var(--secondary)) padding-box,
+    linear-gradient(to right, #0ea5ea, #0bd1d1) border-box;
+  box-shadow: #0bd1d133 0px 3px 20px;
   transform: translateY(-2px);
   transition: all 0.25s cubic-bezier(0.02, 0.01, 0.47, 1);
+  cursor: pointer;
+}
+
+.list-tags li:hover a {
+  color: inherit;
 }
 </style>
