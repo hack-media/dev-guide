@@ -1,20 +1,12 @@
 <template>
-  <div class="row mt-70">
+  <section class="row mt-5">
     <div class="col-lg-12">
-      <h2
-        class="color-linear d-inline-block mb-10 wow animate__ animate__fadeInUp animated"
-        style="visibility: visible; animation-name: fadeInUp"
-      >
-        Recent posts
-      </h2>
-      <p
-        class="text-lg color-gray-500 wow animate__ animate__fadeInUp animated"
-        style="visibility: visible; animation-name: fadeInUp"
-      >
-        Don't miss the latest trends
-      </p>
+      <div>
+        <h2 class="color-linear">Recent Posts</h2>
+        <p>Don't miss the latest trends</p>
+      </div>
 
-      <div class="box-list-posts mt-70">
+      <div class="box-list-posts mt-5">
         <div class="row">
           <div
             v-for="article in recentArticles"
@@ -65,7 +57,7 @@
         ></a>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script setup>

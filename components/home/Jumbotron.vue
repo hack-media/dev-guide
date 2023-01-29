@@ -1,5 +1,5 @@
 <template>
-  <div class="banner">
+  <section class="mt-5">
     <div class="text-center">
       <h1>
         <span class="color-linear">Unlocking</span> the Latest
@@ -20,7 +20,7 @@
         </li>
       </ul>
     </div>
-  </div>
+  </section>
 </template>
 
 <script setup>
@@ -56,16 +56,12 @@ const frameworks = [
 </script>
 
 <style scoped>
-.banner {
-  padding-top: 5rem;
-}
-
 .list-tags {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
   text-align: center;
-  gap: 0.8rem;
+  gap: 0.8rem!important;
 }
 
 .list-tags li {
