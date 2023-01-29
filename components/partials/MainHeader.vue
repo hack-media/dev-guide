@@ -1,5 +1,5 @@
 <template>
-  <header class="header sticky-bar bg-gray-900">
+  <header class="header sticky-bar">
     <div class="container">
       <div class="main-header">
         <div class="header-logo">
@@ -61,7 +61,7 @@
             class="btn btn-search"
             href="#"
           ></a>
-          <div class="form-search p-20">
+          <!-- <div class="form-search p-20">
             <form action="#">
               <input
                 class="form-control"
@@ -69,61 +69,30 @@
                 placeholder="Search"
               />
               <input
-                class="btn-search-2"
+                class="btn-search-"
                 type="submit"
                 value=""
               />
             </form>
-            <div class="popular-keywords text-start mt-20">
-              <p class="mb-10 color-white">Popular tags:</p>
-              <a
-                class="color-gray-600 mr-10 font-xs"
-                href="#"
-                ># Travel,</a
-              ><a
-                class="color-gray-600 mr-10 font-xs"
-                href="#"
-                ># Tech,</a
-              ><a
-                class="color-gray-600 mr-10 font-xs"
-                href="#"
-                ># Movie</a
-              ><a
-                class="color-gray-600 mr-10 font-xs"
-                href="#"
-                ># Lifestyle</a
-              ><a
-                class="color-gray-600 mr-10 font-xs"
-                href="#"
-                ># Sport</a
-              >
-            </div>
-          </div>
-          <a
+          </div> -->
+          <!-- <a
             class="btn btn-linear d-none d-sm-inline-block hover-up hover-shadow"
             href="page-login.html"
           >
             Subscribe
-          </a>
+          </a> -->
         </div>
       </div>
     </div>
   </header>
 </template>
 
-<script>
-export default {
-  name: 'MainHeader',
-};
-</script>
-
 <style scoped>
 .header {
-  padding: 0.6rem 0rem;
-  margin-top: 0.9rem;
   float: left;
   width: 100%;
   position: relative;
+  /* background: var(--ocean) */
 }
 
 .header .main-header {
@@ -132,7 +101,7 @@ export default {
   justify-content: space-between;
   position: relative;
   width: 100%;
-  padding: 5px 0px;
+  /* padding: 5px 0px; */
 }
 
 .header .main-header .header-logo {
@@ -355,7 +324,6 @@ export default {
   background-color: #94a9c9;
 }
 
-
 @media (max-width: 499.98px) {
   .form-search {
     right: 0;
@@ -366,7 +334,6 @@ export default {
   .header .main-header .header-right {
     padding-right: 25px;
   }
-
 
   .header .container {
     max-width: 100%;
@@ -396,7 +363,7 @@ export default {
     max-width: 285px;
     padding-right: 35px;
   }
-  
+
   .burger-icon {
     display: inline-block;
   }
@@ -404,14 +371,14 @@ export default {
 
 .form-search {
   position: absolute;
-  top: 100%;
+  /* top: 100%; */
   right: 98px;
   width: 100%;
   max-width: 350px;
-  z-index: 1234;
+  z-index: 999;
   background-color: #0b1222;
   padding: 5px 5px;
-  display: none;
+  /* display: none; */
   border-radius: 8px;
   border: 1px solid #222f43;
 }
@@ -431,7 +398,7 @@ export default {
   right: 28px;
   width: 40px;
   height: 40px;
-  background: url(../imgs/template/icons/icon-search.svg) no-repeat center;
+  background: white;
   border: 0px;
 }
 

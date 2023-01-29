@@ -2,6 +2,10 @@
 
 :root {
   --primary: #b9e0f2;
+  --secondary: #003b46;
+  --ocean: #07575b;
+  --black: #000;
+  --white: #fff;
 }
 
 * {
@@ -9,6 +13,7 @@
   padding: 0;
   border: 0;
   vertical-align: baseline;
+  box-sizing: border-box;
 }
 
 *:hover {
@@ -19,21 +24,27 @@ html,
 body {
   font-size: 1rem;
   font-family: 'Noto Sans', sans-serif;
-  color: #94a9c9;
-  background-color: #0f172a;
-  line-height: 18px;
-  font-style: normal;
-  font-weight: 400;
+  color: var(--primary);
+  background-color: var(--secondary);
   position: relative;
+}
+
+::-webkit-scrollbar {
+  width: 0.6rem;
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--primary);
+  border-radius: 0.5rem;
 }
 
 a {
   text-decoration: none;
-  color: #000000;
+  color: var(--primary);
 }
 
 a:hover {
-  color: #000000;
+  color: var(--ocean);
 }
 
 a,
@@ -43,6 +54,11 @@ input,
 span,
 h4 {
   transition: all 0.3s ease 0s;
+}
+
+ol,
+ul {
+  padding-left: unset !important;
 }
 
 .hover-up {
@@ -63,21 +79,11 @@ h4 {
 }
 
 .color-linear {
-  background: linear-gradient(
-      90deg,
-      rgb(14, 165, 234),
-      rgb(11, 209, 209) 51%,
-      rgb(14, 165, 234)
-    )
-    var(--x, 0) / 200%;
+  background: linear-gradient(190deg, #0ea5ea, #0bd1d1 51%, #0ea5ea) var(--x, 0) /
+    200%;
   -webkit-background-clip: text !important;
   -webkit-text-fill-color: transparent !important;
   background-clip: text !important;
-  text-fill-color: transparent;
-}
-
-.color-white {
-  color: #b9e0f2;
 }
 
 .form-control {
@@ -94,15 +100,9 @@ h4 {
   color: #7f92b0;
 }
 
-.font-xs {
-  font-size: 12px;
-}
-
 .btn {
   border-radius: 6px;
   padding: 10px 16px;
-  font-family: 'Noto Sans', sans-serif;
-  font-size: 14px;
   line-height: 20px;
   font-weight: 700;
   text-decoration: none;
@@ -124,13 +124,13 @@ h4 {
       rgb(14, 165, 234)
     )
     var(--x, 0) / 200%;
-  color: #ffffff;
+  color: var(--white);
   transition: 0.5s;
 }
 
 .btn.btn-linear:hover {
   --x: 100%;
-  color: #ffffff !important;
+  color: var(--white) !important;
   transition: 0.5s;
 }
 
@@ -143,74 +143,47 @@ input {
   color: #7f92b0;
 }
 
+/* Heading */
 h1 {
+  font-size: 4rem;
+  line-height: 5.4rem;
   font-weight: 800;
-  font-size: 64px;
-  line-height: 87px;
-  color: #000000;
 }
 
 h2 {
-  font-weight: 700;
-  font-size: 45px;
-  line-height: 61px;
-  color: #000000;
-}
-
-h3 {
-  font-weight: 700;
-  font-size: 32px;
-  line-height: 44px;
-  color: #000000;
-}
-
-h4 {
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 33px;
-  color: #000000;
+  font-size: 2.3rem;
+  font-weight: 800;
 }
 
 h5 {
-  font-weight: 700;
-  font-size: 20px;
-  line-height: 27px;
-  color: #000000;
+  font-size: 1.2rem;
+  font-weight: 600;
 }
 
-h6 {
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 22px;
-  color: #000000;
+p {
+  font-weight: 500;
+  font-size: 1.1rem;
 }
 
 @media (max-width: 767.98px) {
   h1 {
-    font-size: 44px;
-    line-height: 63px;
+    font-size: 2.7rem;
+    line-height: 3.9rem;
   }
 
   h2 {
-    font-size: 35px;
-    line-height: 45px;
+    font-size: 2rem;
   }
 }
 
 @media (max-width: 575.98px) {
   h1 {
-    font-size: 34px;
-    line-height: 53px;
+    font-size: 2.1rem;
+    line-height: 3.3rem;
   }
 
   h2 {
-    font-size: 25px;
-    line-height: 35px;
-  }
-
-  h4 {
-    font-size: 20px;
-    line-height: 30px;
+    font-size: 1.7rem;
   }
 }
 
@@ -219,14 +192,13 @@ h6 {
     font-size: 22px;
     line-height: 31px;
   }
+}
 
-  h1 {
-    font-size: 29px;
-    line-height: 45px;
-  }
+/* Spacing */
+.mt-5 {
+  margin-top: 5rem;
+}
 
-  h2 {
-    font-size: 20px;
-    line-height: 30px;
-  }
+.text-muted {
+  color: #b9b9b9!important;
 }
