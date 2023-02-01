@@ -1,4 +1,9 @@
 export default defineNuxtConfig({
+  typescript: {
+    strict: true,
+    shim: false,
+  },
+
   app: {
     head: {
       meta: [
