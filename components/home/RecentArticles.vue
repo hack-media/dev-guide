@@ -1,47 +1,43 @@
 <template>
-  <section class="row mt-5">
+  <section class="row mt-7">
     <div class="col-lg-12">
       <div>
         <h2 class="color-linear">Recent Posts</h2>
         <p>Don't miss the latest trends</p>
       </div>
 
-      <div class="box-list-posts mt-5">
-        <div class="row">
-          <div
-            v-for="article in recentArticles"
-            class="col-lg-6"
-          >
-            <div
-              class="card-list-posts card-list-posts-small wow animate__ animate__fadeIn animated"
-              style="visibility: visible; animation-name: fadeIn"
-            >
-              <div class="card-image hover-up">
-                <a href="single-sidebar.html"
-                  ><img
-                    src="~/assets/images/img7.jpg"
-                    alt="Genz"
-                /></a>
-              </div>
-              <div class="card-info">
-                <a href="single-sidebar.html">
-                  <h5 class="mb-15">
-                    How to Grow Your Business on Instagram in 2022
-                  </h5></a
-                >
-                <p class="color-gray-500">
-                  Gosh jaguar ostrich quail one excited dear hello and bound and
-                  the and bland moral misheard roadrunner flapped lynx far that
-                  and jeepers giggled far and far
-                </p>
-                <div class="row mt-20">
-                  <div class="col-12">
-                    <span class="calendar-icon color-gray-700 text-sm mr-25"
-                      >29 May 2022</span
-                    ><span class="color-gray-700 text-sm timeread"
-                      >3 mins read</span
-                    >
-                  </div>
+      <div class="row mt-5">
+        <div
+          v-for="article in recentArticles"
+          class="col-lg-6"
+        >
+          <div class="card-list-posts">
+            <div class="card-image hover-up">
+              <NuxtLink :to="{ name: 'index' }">
+                <img
+                  src="~/assets/images/img7.jpg"
+                  alt=""
+                />
+              </NuxtLink>
+            </div>
+
+            <div class="card-info">
+              <NuxtLink :to="{ name: 'index' }">
+                <h5 class="mb-3">
+                  How to Grow Your Business on Instagram in 2022
+                </h5>
+              </NuxtLink>
+
+              <p>
+                Gosh jaguar ostrich quail one excited dear hello and bound and
+                the and bland moral misheard roadrunner flapped lynx far that
+                and jeepers giggled far and far
+              </p>
+
+              <div class="row">
+                <div class="col-12 date">
+                  <span> 29 Jan 2023 </span>
+                  <span class="time-read"> 3 mins read </span>
                 </div>
               </div>
             </div>
@@ -49,18 +45,12 @@
         </div>
       </div>
 
-      <div class="text-start mb-80">
-        <a
-          class="btn btn-linear btn-load-more wow animate__ animate__zoomIn animated"
-          style="visibility: visible; animation-name: zoomIn"
-          >Show More Posts<i class="fi-rr-arrow-small-right"></i
-        ></a>
-      </div>
+      <IncludesReadMore />
     </div>
   </section>
 </template>
 
-<script setup>
+<script setup lang="ts">
 const recentArticles = [
   {
     title: 'How to Grow Your Business on Instagram in 2022',
@@ -84,47 +74,44 @@ const recentArticles = [
 </script>
 
 <style scoped>
-.calendar-icon {
-  background: url(../imgs/template/icons/calendar.svg) no-repeat left center;
-  display: inline-block;
-  padding-left: 23px;
-  padding-top: 2px;
-}
-
 .card-list-posts {
   display: flex;
   width: 100%;
-  margin-bottom: 60px;
+  margin-bottom: 4rem;
 }
 
 .card-list-posts .card-image {
   width: 270px;
-  min-width: 270px;
-  margin-right: 20px;
+  max-width: 170px;
+  min-width: 170px;
+  margin-right: 1rem;
 }
 
 .card-list-posts .card-image img {
   width: 100%;
-  border-radius: 16px;
+  border-radius: 0.5rem;
 }
 
 .card-list-posts .card-info {
   width: 100%;
 }
 
-.card-list-posts .card-info a:hover h3,
-.card-list-posts .card-info a:hover h4,
+.card-list-posts .card-info p {
+  color: #66768f;
+  font-size: 0.9rem;
+}
+
+.card-list-posts .card-info .date {
+  font-size: 0.8rem;
+}
+
+.card-list-posts .card-info .time-read {
+  display: inline-block;
+  padding: 0px 0px 0px 23px;
+}
+
 .card-list-posts .card-info a:hover h5 {
   color: #1cc2e7 !important;
-}
-
-.card-list-posts .card-info .col-7 a:hover {
-  color: #0ea5ea !important;
-}
-
-.card-list-posts.card-list-posts-small .card-image {
-  max-width: 170px;
-  min-width: 170px;
 }
 
 @media (max-width: 767.98px) {
@@ -144,21 +131,5 @@ const recentArticles = [
     min-width: 100%;
     margin-bottom: 30px;
   }
-}
-
-.timeread {
-  background: url(../imgs/page/homepage1/clock.svg) no-repeat left center;
-  display: inline-block;
-  padding: 0px 0px 0px 23px;
-}
-
-.btn.btn-load-more {
-  border-radius: 80px;
-  padding: 18px 30px;
-}
-
-.btn.btn-load-more i {
-  display: inline-block;
-  vertical-align: middle;
 }
 </style>

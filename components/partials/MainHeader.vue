@@ -411,6 +411,6 @@
 .btn.btn-search {
   height: 42px;
   width: 42px;
-  background: url(../imgs/template/icons/icon-search.svg) no-repeat center;
+  /* background: url(../imgs/template/icons/icon-search.svg) no-repeat center; */
 }
 </style>

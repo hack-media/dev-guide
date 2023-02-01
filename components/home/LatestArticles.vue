@@ -1,5 +1,5 @@
 <template>
-  <section class="mt-5">
+  <section class="mt-7">
     <div>
       <h2 class="color-linear">Latest Articles</h2>
       <p>Discover the most outstanding articles in all topics</p>
@@ -58,10 +58,12 @@
         </div>
       </div>
     </div>
+
+     <IncludesReadMore />
   </section>
 </template>
 
-<script setup>
+<script setup lang="ts">
 const latestArticles = [
   {
     title: 'Aenean Auctor Wisi Et Urna Aliquam Erat',
