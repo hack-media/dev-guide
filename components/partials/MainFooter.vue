@@ -1,14 +1,14 @@
 <template>
-  <footer class="footer">
+  <footer class="footer mt-7">
     <div class="container">
       <div class="footer-1 bg-gray-850 border-gray-800">
         <div class="row">
           <div class="col-lg-4 mb-30">
             <a href="index.html">
-              <img
+              <!-- <img
                 src="assets/imgs/template/logo.svg"
                 alt=""
-              />
+              /> -->
             </a>
             <p class="mb-20 mt-20 text-sm color-gray-500">
               Lorem ipsum dolor, sit amet consectetur adipisicing elit.

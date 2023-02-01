@@ -11,3 +11,10 @@
     </div>
   </main>
 </template>
+
+<script setup lang="ts">
+useHead({
+  title: 'Dev Guide - Unlocking the latest tech trend',
+  meta: [{ name: 'description', content: 'Unlocking the latest tech trend' }],
+});
+</script>
