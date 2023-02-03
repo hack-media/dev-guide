@@ -13,7 +13,7 @@
       >
         <div class="card-blog hover-up">
           <div class="card-image mb-3">
-            <NuxtLink to="/">
+            <NuxtLink :to="`/blog/${article.title}/`">
               <img
                 src="~/assets/images/news4.png"
                 alt=""
@@ -28,7 +28,7 @@
               </div>
             </div>
 
-            <NuxtLink to="/">
+            <NuxtLink :to="`/blog/${article.title}/`">
               <h5 class="mt-4">
                 Self-observation is the first step of inner unfolding
               </h5>
@@ -49,7 +49,7 @@
               </div>
 
               <div class="col-5 text-end">
-                <NuxtLink to="/">
+                <NuxtLink :to="`/blog/${article.title}/`">
                   <span>Read more</span>
                 </NuxtLink>
               </div>
