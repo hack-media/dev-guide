@@ -13,7 +13,7 @@
         >
           <div class="card-list-posts">
             <div class="card-image hover-up">
-              <NuxtLink :to="{ name: 'index' }">
+              <NuxtLink :to="`/blog/${article.title}/`">
                 <img
                   src="~/assets/images/img7.jpg"
                   alt=""
@@ -22,7 +22,7 @@
             </div>
 
             <div class="card-info">
-              <NuxtLink :to="{ name: 'index' }">
+              <NuxtLink :to="`/blog/${article.title}/`">
                 <h5 class="mb-3">
                   How to Grow Your Business on Instagram in 2022
                 </h5>
